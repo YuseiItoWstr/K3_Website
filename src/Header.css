@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@200..700&display=swap");
+
+.oswald-regular {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: black;
+  min-height: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 20px;
+  font-family: Oswald;
+  font-weight: bold;
+  z-index: 2;
+}
+
+header h2 {
+  font-style: italic;
+  font-size: 30px;
+  color: white;
+}
+
+header a {
+  color: gray;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+header a::before {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+header a:hover {
+  display: inline-block;
+  color: white;
+  transform: scale(1.3);
+}
+
+header a:hover::before {
+  width: 100%;
+  background-color: white;
+}
+
+header .nav-list {
+  display: flex;
+  list-style-type: none;
+}
+
+header .nav-list li {
+  margin-right: 50px;
+  list-style-type: none;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+}
+
+header .logo .logo-image {
+  margin-right: 40px;
+  width: 80px;
+  height: auto;
+  transition: transform 0.5s ease;
+}
+
+.logo-image:hover {
+  transform: rotate(360deg);
+}
+
+@media screen and (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+  }
+
+  header {
+    font-size: 16px;
+  }
+
+  header h3 {
+    font-style: italic;
+    font-size: 24px;
+    margin-left: 20px;
+  }
+
+  header .nav-list {
+    flex-direction: column;
+    list-style-type: none;
+  }
+
+  header .nav-list li {
+    margin-right: 20px;
+    margin-bottom: 10px;
+  }
+}
